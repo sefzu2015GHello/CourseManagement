@@ -1,57 +1,22 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tableLayout1"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center_vertical"
-    android:stretchColumns="0,3"
+    android:orientation="horizontal"
     >
-    <!-- first colomn -->
-    <TableRow android:id="@+id/tableRow1"
+    <Button
+        android:text="导入"
+        android:id="@+id/daoru"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView/>
-        <TextView android:text="用户名："
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24px" />
-        <EditText android:id="@+id/editText1"
-            android:textSize="24px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="200px"/>
-        <TextView />
-    </TableRow>
-    <TableRow android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:onClick="myclick1"
+        />
+
+    <Button
+        android:text="查看"
+        android:id="@+id/chakan"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView/>
-        <TextView android:text="密  码："
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24px" />
-        <EditText android:id="@+id/editText2"
-            android:textSize="24px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            />
-        <TextView />
-    </TableRow>
-    <!-- 第三行 -->
-    <TableRow android:id="@+id/tableRow3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView/>
-        <Button android:id="@+id/button1"
-            android:text="登录"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button android:id="@+id/button2"
-            android:text="退出"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView />
-    </TableRow>
-</TableLayout>
+        android:layout_height="wrap_content"
+        android:onClick="myclick2"
+        />
+</LinearLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="left"
+    >
+    <TextView android:text="课程信息"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:textSize="24dp"
+    android:gravity="center"
+    android:textColor="#000000"
+    />
+    <TableRow android:id="@+id/tRgroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView android:id="@+id/tV11"
+            android:text="课程名称:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+
+        <TextView android:id="@+id/tV12"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV21"
+            android:text="专业:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV22"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV31"
+            android:text="专业人数:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV32"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV41"
+            android:text="课程名称:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV42"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV51"
+            android:text="选修类型:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV52"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV61"
+            android:text="学分:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV62"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV71"
+            android:text="学时:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV72"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV81"
+            android:text="实验学时:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV82"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV91"
+            android:text="上机学时:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV92"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV101"
+            android:text="起讫周序:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV102"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV111"
+            android:text="任课老师:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV112"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV121"
+            android:text="备注:"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_column="0" />
+
+        <TextView android:id="@+id/tV122"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+</TableLayout>

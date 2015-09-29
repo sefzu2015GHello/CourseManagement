@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ShowInfoActivity"
+            android:label="@string/title_activity_show_info" >
+        </activity>
+        <activity
+            android:name=".ShowCourseActivity"
+            android:label="@string/title_activity_show_course" >
+        </activity>
     </application>
 
 </manifest>
