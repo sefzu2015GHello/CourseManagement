@@ -8,11 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-<<<<<<< HEAD
-=======
 import android.widget.Button;
->>>>>>> f0af7f9dbb05a8692d01addcb34f332bec9f3666
-
 public class MainActivity extends Activity {
 
     @Override
@@ -33,17 +29,9 @@ public class MainActivity extends Activity {
 
     }
 
-<<<<<<< HEAD
     public void myclick1(View view){}
     public void myclick2(View view){
         Intent intent=new Intent(MainActivity.this,ShowInfoActivity.class);
         startActivity(intent);
     }
-=======
-
-
-
-
-
->>>>>>> f0af7f9dbb05a8692d01addcb34f332bec9f3666
 }

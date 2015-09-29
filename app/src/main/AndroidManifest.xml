@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
         <activity
             android:name=".ShowInfoActivity"
             android:label="@string/title_activity_show_info" >
@@ -24,7 +24,8 @@
         <activity
             android:name=".ShowCourseActivity"
             android:label="@string/title_activity_show_course" >
-=======
+        </activity>
+        <!--=======-->
 
         <activity
             android:name=".SecondActivity"
@@ -34,7 +35,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
->>>>>>> f0af7f9dbb05a8692d01addcb34f332bec9f3666
+<!--&gt;>>>>>> f0af7f9dbb05a8692d01addcb34f332bec9f3666-->
         </activity>
     </application>
 
