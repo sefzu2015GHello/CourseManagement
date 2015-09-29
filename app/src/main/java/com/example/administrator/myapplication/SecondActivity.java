@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 /**
  * Created by Administrator on 2015/9/29.
  *
@@ -26,8 +28,11 @@ public class SecondActivity extends Activity{
         TextView tx = (TextView)findViewById(R.id.textView3);
 
         DBManager dbm = new DBManager(this);
-        Course course = dbm.query("计算机仿真技术");
-        tx.setText(course.getExperimentHour());
+       // Course course = dbm.query("计算机仿真技术");
+        //tx.setText(course.getExperimentHour());
+        ArrayList list = dbm.allName();
+        String[] names =(String[])list.toArray();
+        tx.setText(names[5]);
 
 
 

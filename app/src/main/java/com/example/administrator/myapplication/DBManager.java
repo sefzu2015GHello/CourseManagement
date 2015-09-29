@@ -46,7 +46,6 @@ public class DBManager {
 
             course.setGrade(cursor.getString(0));
             course.setMajor(cursor.getString(1));
-            course.setSum(cursor.getString(2));
             course.setCourseName(cursor.getString(3));
             course.setType(cursor.getString(4));
             course.setCredit(cursor.getString(5));
@@ -67,18 +66,30 @@ public class DBManager {
     public void insert(Course course){  //向表插入数据
         ContentValues values = new ContentValues();//ContentValues用来储存数据；
 
-        values.put("grade",course.getGrade());
-        values.put("major",course.getMajor());
-        values.put("sum",course.getSum());
-        values.put("courseName",course.getCourseName());
-        values.put("type",course.getType());
-        values.put("credit",course.getCredit());
-        values.put("classHour",course.getClassHour());
-        values.put("experimentHour",course.getExperimentHour());
-        values.put("computerHour",course.getComputerHour());
-        values.put("fromToEnd",course.getFromToEnd());
-        values.put("teacher",course.getTeacher());
-        values.put("note",course.getNote());
+        if(course.getGrade()!=null)
+            values.put("grade",course.getGrade());
+        if(course.getMajor()!=null)
+            values.put("major",course.getMajor());
+        if(course.getSum()!=null)
+            values.put("sum",course.getSum());
+        if(course.getCourseName()!=null)
+            values.put("courseName",course.getCourseName());
+        if(course.getType()!=null)
+            values.put("type",course.getType());
+        if(course.getCredit()!=null)
+            values.put("credit",course.getCredit());
+        if(course.getClassHour()!=null)
+            values.put("classHour",course.getClassHour());
+        if(course.getExperimentHour()!=null)
+            values.put("experimentHour",course.getExperimentHour());
+        if(course.getComputerHour()!=null)
+            values.put("computerHour",course.getComputerHour());
+        if(course.getFromToEnd()!=null)
+            values.put("fromToEnd",course.getFromToEnd());
+        if(course.getTeacher()!=null)
+            values.put("teacher",course.getTeacher());
+        if(course.getNote()!=null)
+            values.put("note",course.getNote());
 
         db.insert(TABLE_NAME, null, values);
     }
