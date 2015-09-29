@@ -4,9 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
+=======
+import android.widget.Button;
+>>>>>>> f0af7f9dbb05a8692d01addcb34f332bec9f3666
 
 public class MainActivity extends Activity {
 
@@ -14,32 +19,31 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button  login = (Button)findViewById(R.id.button1);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,SecondActivity.class);//跳转到SecondActivity
+                startActivity(intent);//实现跳转
+
+            }
+        });
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
+<<<<<<< HEAD
     public void myclick1(View view){}
     public void myclick2(View view){
         Intent intent=new Intent(MainActivity.this,ShowInfoActivity.class);
         startActivity(intent);
     }
+=======
+
+
+
+
+
+>>>>>>> f0af7f9dbb05a8692d01addcb34f332bec9f3666
 }
