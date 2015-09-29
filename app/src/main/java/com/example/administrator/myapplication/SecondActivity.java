@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by Administrator on 2015/9/29.
@@ -15,12 +18,17 @@ public class SecondActivity extends Activity{
     private DBOpenHelper helper;
     private SQLiteDatabase db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second);
+        TextView tx = (TextView)findViewById(R.id.textView3);
 
         DBManager dbm = new DBManager(this);
+        Course course = dbm.query("计算机仿真技术");
+        tx.setText(course.getExperimentHour());
+
 
 
 

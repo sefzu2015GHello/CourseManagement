@@ -21,10 +21,10 @@ public class DBOpenHelper extends SQLiteOpenHelper{
     //数据库第一次被创建时onCreate会被调用
     @Override
     public void onCreate(SQLiteDatabase db) {// 创建课程信息表
-        db.execSQL("create table IF NOT EXISTS tb_course ( grade integer,major text,sum integer,"
-                +"courseName text primary key,type text,credit real,classHour integer,"
-                +"experimentHour integer,computerHour integer,fromToEnd text,"
-                +"teacher text,note text");
+        db.execSQL("create table IF NOT EXISTS tb_course ( grade text,major text,sum text,"
+                +"courseName text primary key,type text,credit text,classHour text,"
+                +"experimentHour text,computerHour text,fromToEnd text,"
+                +"teacher text,note text)");
 
     }
 

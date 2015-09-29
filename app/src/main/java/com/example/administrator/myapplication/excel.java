@@ -1,5 +1,7 @@
 package com.example.administrator.myapplication;
 
+import android.util.Log;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,22 +33,23 @@ public class excel {
             sheet = book.getSheet(0);//工作表
             rows = sheet.getRows();//行数
 
-            for(int i=3;i<=rows;i++){
+            for(int i=4;i<=rows;i++){
                 Course course = new Course();
 
-                course.setGrade(Integer.parseInt(getCell(i,0)));//导入课程信息
-                course.setMajor(getCell(i, 1));
-                course.setSum(Integer.parseInt(getCell(i, 2)));
-                course.setCourseName(getCell(i, 3));
-                course.setType(getCell(i, 4));
-                course.setCredit(Float.parseFloat(getCell(i, 5)));
-                course.setClassHour(Integer.parseInt(getCell(i, 6)));
-                course.setExperimentHour(Integer.parseInt(getCell(i, 7).trim()));
-                course.setComputerHour(Integer.parseInt(getCell(i, 8)));
-                course.setFromToEnd(getCell(i, 9));
-                course.setTeacher(getCell(i, 10));
-                course.setNote(getCell(i, 11));
+                course.setGrade(getCell(i,1));//导入课程信息
+                course.setMajor(getCell(i, 2));
+                course.setSum(getCell(i, 3));
+                course.setCourseName(getCell(i, 4));
+                course.setType(getCell(i, 5));
+                course.setCredit(getCell(i, 6));
+                course.setClassHour(getCell(i, 7));
+                course.setExperimentHour(getCell(i, 8));
+                course.setComputerHour(getCell(i, 9));
+                course.setFromToEnd(getCell(i, 10));
+                course.setTeacher(getCell(i, 11));
+                course.setNote(getCell(i, 12));
 
+                Log.i("Data",getCell(i, 9));
                 list.add(course);
             }
         } catch (BiffException e) {
@@ -59,7 +62,7 @@ public class excel {
     }
 
     public String getCell(int i,int j){//获取i行j列的单元格的值
-        Cell c = sheet.getCell(j, i);
+        Cell c = sheet.getCell(j-1, i-1);
         return c.getContents().trim();//返回去空格的值
     }
 

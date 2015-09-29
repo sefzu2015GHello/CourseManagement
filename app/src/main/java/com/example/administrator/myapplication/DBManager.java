@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,32 +15,44 @@ import java.util.List;
  * 对数据库的操作
  */
 public class DBManager {
-    private DBOpenHelper helper;
-    private SQLiteDatabase db;
+    private DBOpenHelper helper ;
+    private SQLiteDatabase db ;
     private static final String TABLE_NAME = "tb_course";//数据库中表的名称
 
     public DBManager(Context context) {
-        init();
-
         helper = new DBOpenHelper(context);
         db = helper.getWritableDatabase();
+
+        init();
+
+    }
+
+    public ArrayList<String> allName(){//返回所有课程名
+        String courseName;
+        ArrayList<String> list = new ArrayList<String>();
+        Cursor cursor = db.query(TABLE_NAME, new String[]{"courseName"},null,null,null,null,null);
+        if(cursor.getCount()>0){
+            courseName = cursor.getString(cursor.getColumnIndex("courseName"));
+            list.add(courseName);
+        }
+        return list;
     }
 
     public Course query(String Name){//根据课程名查询数据
         Course course = new Course();
-        Cursor cursor = db.query(TABLE_NAME, new String[]{"courseName"},"courseName = "+Name,null,null,null,null);
+        Cursor cursor = db.query(TABLE_NAME, null,"courseName = ?",new String[]{Name},null,null,null);
         if(cursor.getCount()>0){
             cursor.moveToFirst(); //将游标移动到第一个记录
 
-            course.setGrade(cursor.getInt(0));
+            course.setGrade(cursor.getString(0));
             course.setMajor(cursor.getString(1));
-            course.setSum(cursor.getInt(2));
+            course.setSum(cursor.getString(2));
             course.setCourseName(cursor.getString(3));
             course.setType(cursor.getString(4));
-            course.setCredit(cursor.getFloat(5));
-            course.setClassHour(cursor.getInt(6));
-            course.setExperimentHour(cursor.getInt(7));
-            course.setComputerHour(cursor.getInt(8));
+            course.setCredit(cursor.getString(5));
+            course.setClassHour(cursor.getString(6));
+            course.setExperimentHour(cursor.getString(7));
+            course.setComputerHour(cursor.getString(8));
             course.setFromToEnd(cursor.getString(9));
             course.setTeacher(cursor.getString(10));
             course.setNote(cursor.getString(11));
@@ -67,7 +80,7 @@ public class DBManager {
         values.put("teacher",course.getTeacher());
         values.put("note",course.getNote());
 
-        db.insert(TABLE_NAME,null,values);
+        db.insert(TABLE_NAME, null, values);
     }
 
 
