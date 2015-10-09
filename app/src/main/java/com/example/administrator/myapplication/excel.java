@@ -21,25 +21,17 @@ import jxl.read.biff.BiffException;
 
 public class excel {
 
+    public Course course;
     public Sheet sheet;
-    public String path = "/storage/emulated/0/tencent/QQfile_recv/course.xls";//模拟器sd卡中excel表格的路径
-                                                                //这是个静态路径，默认为qq接收文件夹
-    //public String path = "mnt/sdcard/course.xls";
-    public void setPath(String filePath)
-    {
-        path=filePath;
-    }
+    public static final String path = "mnt/sdcard/course.xls";//模拟器sd卡中excel表格的路径
 
     public  List<Course> readExcel() {//读取excel表格的所有数据
         int rows;
-        ArrayList<Course> list = new ArrayList<>();
-        Log.i("Data","目录是否可读");
+        ArrayList<Course> list = new ArrayList<Course>();
         try {
             Workbook book = Workbook.getWorkbook(new File(path));//工作簿
             sheet = book.getSheet(0);//工作表
             rows = sheet.getRows();//行数
-
-            Log.i("Data","行数"+rows);
 
             for(int i=4;i<=rows;i++){
                 Course course = new Course();
