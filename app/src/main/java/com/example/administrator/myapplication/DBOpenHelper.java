@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DBOpenHelper extends SQLiteOpenHelper{
     private static final int VERSION = 1;// 定义数据库版本号
-    private static final String DBNAME = "test.db";// 定义数据库名
+    private static final String DBNAME = "school.db";// 定义数据库名
 
     public DBOpenHelper(Context context) {// 定义构造函数
 
