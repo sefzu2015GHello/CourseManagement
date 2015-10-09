@@ -3,7 +3,6 @@ package com.example.administrator.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,29 +16,23 @@ import android.widget.Toast;
 
 public class ShowInfoActivity extends Activity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_info);
 
         final ListView listView=(ListView)findViewById(R.id.listView1);
-        //listView.addHeaderView(line());
+        listView.addHeaderView(line());
 
-        DBManager dbm = new DBManager(this);
-        String[] ctype=dbm.allName();//获取所有课程名
+        String[] ctype=new String[]{"情景模式","主题模式","系统管理","关于手机","1","2","3"};
 
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_activated_1,ctype);
         listView.setAdapter(adapter);
-       // listView.addFooterView(line());
+        listView.addFooterView(line());
         listView.setOnItemClickListener(new OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View arg1, int pos, long id){
-                String result=parent.getItemAtPosition(pos).toString();//获取选择项的值
-
-                Log.i("string4","点击了----"+result);
-
+                String result=parent.getItemAtPosition(pos).toString();
                 Intent intent=new Intent(ShowInfoActivity.this,ShowCourseActivity.class);
                 intent.putExtra("cname",result);
                 startActivity(intent);
