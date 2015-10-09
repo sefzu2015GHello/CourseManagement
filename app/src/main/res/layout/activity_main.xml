@@ -3,20 +3,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal"
+    android:gravity="center"
     >
     <Button
         android:text="导入"
         android:id="@+id/daoru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="myclick1"
+
         />
 
-    <Button
-        android:text="查看"
-        android:id="@+id/chakan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="myclick2"
-        />
 </LinearLayout>
