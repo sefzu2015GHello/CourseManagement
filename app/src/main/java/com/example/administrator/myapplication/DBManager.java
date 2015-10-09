@@ -69,7 +69,6 @@ public class DBManager {
         }
 
         if(!cursor.isAfterLast()){
-            //cursor.moveToFirst(); //将游标移动到第一个记录
 
             course.setGrade(cursor.getString(cursor.getColumnIndex("grade")));
             course.setMajor(cursor.getString(cursor.getColumnIndex("major")));

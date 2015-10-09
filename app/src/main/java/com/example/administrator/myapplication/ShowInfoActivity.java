@@ -25,25 +25,22 @@ public class ShowInfoActivity extends Activity {
         setContentView(R.layout.activity_show_info);
 
         final ListView listView=(ListView)findViewById(R.id.listView1);
-        //listView.addHeaderView(line());
 
         DBManager dbm = new DBManager(this);
         String[] ctype=dbm.allName();//获取所有课程名
 
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_activated_1,ctype);
         listView.setAdapter(adapter);
-       // listView.addFooterView(line());
+
         listView.setOnItemClickListener(new OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View arg1, int pos, long id){
                 String result=parent.getItemAtPosition(pos).toString();//获取选择项的值
 
-                Log.i("string4","点击了----"+result);
-
                 Intent intent=new Intent(ShowInfoActivity.this,ShowCourseActivity.class);
                 intent.putExtra("cname",result);
                 startActivity(intent);
-//                Toast.makeText(ShowInfoActivity.this,result,Toast.LENGTH_SHORT).show();
+
             }
         });
     }
@@ -69,10 +66,5 @@ public class ShowInfoActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    private View line(){
-        ImageView image=new ImageView(this);
-        image.setImageResource(R.drawable.line1);
-        return image;
-    }
+    
 }
