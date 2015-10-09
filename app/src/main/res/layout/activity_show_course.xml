@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/tV21"
-            android:text="专业:"
+            android:text="年级:"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:textSize="20dp"
@@ -54,7 +54,7 @@
 
         <TextView
             android:id="@+id/tV31"
-            android:text="专业人数:"
+            android:text="专业:"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:textSize="20dp"
@@ -73,7 +73,7 @@
 
         <TextView
             android:id="@+id/tV41"
-            android:text="课程名称:"
+            android:text="人数:"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:textSize="20dp"
@@ -85,6 +85,7 @@
             android:textSize="20dp"
             />
     </TableRow>
+
 
     <TableRow
         android:layout_width="match_parent"
@@ -200,38 +201,20 @@
             />
     </TableRow>
 
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/tV111"
-            android:text="任课老师:"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:textSize="20dp"
-            android:layout_column="0" />
-
-        <TextView android:id="@+id/tV112"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:textSize="20dp"
-            />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/tV121"
             android:text="备注:"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:textSize="20dp"
             android:layout_column="0" />
 
-        <TextView android:id="@+id/tV122"
+        <TextView android:id="@+id/tV112"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:textSize="20dp"
